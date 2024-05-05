@@ -1,0 +1,22 @@
+server:
+  port: 1111
+spring:
+  application:
+    name: blog-backend
+  main:
+    bannerMode: off
+  datasource:
+    autoconfigure: false
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/blog
+logging:
+  level:
+    org.hibernate.orm.jdbc.bind: trace
+  pattern:
+    console: '${LOG_LEVEL_PATTERN:-%5p} %m%n'
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
