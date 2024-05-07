@@ -1,4 +1,4 @@
-package dev.igraciarena.blogbackend.domain.dto;
+package dev.igraciarena.blogbackend.domain.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AccessLevel;
@@ -7,8 +7,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-
-import java.time.LocalDateTime;
 
 /**
  * @author ivan.graciarena
@@ -19,11 +17,9 @@ import java.time.LocalDateTime;
 @Builder(builderClassName = "Builder")
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class PostResponse {
+public class PostUpdateRequest {
     String title;
     @JsonProperty(value = "sub_title")
     String subTitle;
     String content;
-    @JsonProperty(value = "created_date")
-    LocalDateTime createdDate;
 }

@@ -4,6 +4,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
+import lombok.Setter;
 import lombok.Value;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -18,6 +19,7 @@ import java.time.LocalDateTime;
 @Value
 @EqualsAndHashCode
 @Builder
+@Setter
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Document(collection = "post")
 public class PostEntity {
